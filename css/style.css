@@ -1074,7 +1074,7 @@ body
 }
 .four_s
 {
-    margin-top: 65px;
+    margin: 65px 0;
 }
 .four_keep
 {
@@ -1101,12 +1101,11 @@ body
 .orange_init
 {
     display: block;
-    margin: 0 auto;
+    margin: 75px 0 90px;
     text-align: center;
     color: #ff7900;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 90px;
 }
 .how_work
 {

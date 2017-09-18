@@ -179,6 +179,32 @@ $(window).on('resize',function() {
         }
     });
 });
+var play = true;
+$(document).scroll(function(){
+    var scroll_top = $(document).scrollTop();
+    var offset_mac = $('.macbook').offset().top;
+    var mac_height = $('.macbook').outerHeight();
+    if((scroll_top>=offset_mac-100 && (scroll_top<=offset_mac+mac_height)) && play)
+    {
+        var vid = document.getElementById("myVideo"); 
+        vid.play();
+        play=false;
+    }
+    else if(scroll_top>offset_mac+mac_height)
+    {
+        play=true;
+        var vid = document.getElementById("myVideo"); 
+        vid.pause();
+    }
+    else if(scroll_top<offset_mac-100)
+    {
+        play=true;
+        var vid = document.getElementById("myVideo"); 
+        vid.pause();
+    }
+    
+    console.log(scroll_top);
+});
 $(document).ready(function() {
     $(window).trigger('resize');
     $('input[name="tel"]').mask("+7 (999) 999-99-99");
