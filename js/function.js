@@ -203,7 +203,6 @@ $(document).scroll(function(){
         vid.pause();
     }
     
-    console.log(scroll_top);
 });
 $(document).ready(function() {
     $(window).trigger('resize');
@@ -286,11 +285,13 @@ $(document).ready(function() {
         var text_in = $(this).data('text'),
             komp_name = $(this).data('name'),
             img_url = $(this).find('.rev_firm').attr('src'),
-            count_r = $(this).find('.rev_count').text();
+            count_r = $(this).find('.rev_count').text(),
+            link_navi = $(this).data('linknavi');
         $('.init_text_r').html(text_in);
         $('.rev_firm_f').attr('src',img_url);
         $('.rev_head_f').text(komp_name);
         $('.rev_count_f').text(count_r);
+        $('.rev_count_f').attr("href",link_navi);
         $('.overlay.rewiew_f').css('display','block');
         $('body').css({'overflow':'hidden'});
     });
