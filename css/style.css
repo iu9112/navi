@@ -2008,3 +2008,106 @@ body
     object-fit: fill;
     height: 100%;
 }
+.my_width
+{
+    width:750px;
+}
+.col_20
+{
+    width: 20%;
+    height: 25px;
+}
+.col_30
+{
+    width: 30%;
+}
+.ml_7
+{
+    margin-right: 75px;
+}
+.w_b_t
+{
+    border-top:1px solid #5ab3f4;
+}
+.b_r
+{
+    border-right:1px solid #5ab3f4;
+}
+.b_r_l
+{
+    border-right:1px solid #5ab3f4;
+    border-left:1px solid #5ab3f4;
+}
+.mb_20
+{
+    margin-bottom: 20px;
+}
+.before_list_ico
+{
+    position: relative;
+}
+.before_list_ico:before
+{
+    content: "";
+    bottom: 100%;
+    height: 25px;
+    width: 1px;
+    background-color: #5ab3f4;
+    left:50%;
+    margin-left: -1px;
+    position: absolute;
+}
+.inc_first,.inc_sec
+{
+    color: #505050;
+    font-size: 15px;
+    font-family: ProximaNovaRegular;
+    width: 100%;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+.inc_first
+{
+    padding-top: 6px;
+}
+.cost_include
+{
+    display: block;
+    color: #ff7900;
+    font-size: 18px;
+    line-height: 25px;
+}
+.inc_first:before
+{
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 20px;
+    background-image: url(../images/loc_pin.png);
+    background-position: center;
+    background-size: cover;
+    left: 0px;
+    top: 3px;
+    margin-left: -10px;
+}
+.inc_sec:before
+{
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/Search.png);
+    background-position: center;
+    background-size: cover;
+    left: 0px;
+    top: 0px;
+    margin-left: -10px;
+}
+.he_9
+{
+    height: 90px;
+}
