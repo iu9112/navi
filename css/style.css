@@ -486,6 +486,7 @@ body
 .rev_count_f
 {
     margin-bottom: 5px;
+    text-decoration: none;
 }
 .rev_count:before,.rev_count_f:before
 {
