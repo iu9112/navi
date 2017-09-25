@@ -7,17 +7,17 @@ var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('video_frame', {
         videoId: url,
-        playerVars:{
+        playerVars: {
             autoplay: 0,
-            rel:0,
-            showinfo:0
+            rel: 0,
+            showinfo: 0
         }
     });
-};
-$(window).on('resize',function() {
+}
+$(window).on('resize', function () {
         var mX = 0,
-        direction='';
-        $('.main_view').on('mousemove', function(e){
+        direction = '';
+        $('.main_view').on('mousemove', function (e){
         var wid_h = $('.hand_shake').outerWidth(),
             width_m = $('.main_keep').outerWidth(),
             full_w = $('.main_view').outerWidth(),
@@ -261,7 +261,12 @@ $(document).ready(function() {
             $('.col_text.address_str').addClass('no_sel');
             var label=$('input:radio[name="radio1"]:checked').prop("labels"),
                 text = $(label).text().replace("выгодно!","");
-                $('.col_text.tarif_str').text(text);
+                var title = $('input:radio[name="radio1"]:checked').parent().find('.col_head').text();
+                var crop_text = text.split('/');
+                if(crop_text[0]=='$100' && title == '4-ч значные'){
+                    crop_text[0] = '$50';
+                }
+                $('.col_text.tarif_str').text(crop_text[0]);
         }
         else if($('.succec_log .big_err').text()!='' && $('input:radio[name="radio1"]:checked').length > 0)
         {
@@ -291,7 +296,7 @@ $(document).ready(function() {
         $('.rev_firm_f').attr('src',img_url);
         $('.rev_head_f').text(komp_name);
         $('.rev_count_f').text(count_r);
-        $('.rev_count_f').attr("href",link_navi);
+        $('.rev_count_f').attr("href",link_navi).attr("target","_blank");
         $('.overlay.rewiew_f').css('display','block');
         $('body').css({'overflow':'hidden'});
     });
