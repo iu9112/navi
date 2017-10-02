@@ -250,7 +250,7 @@ body
     content: '';
     width: 237px;
     height: 78px;
-    top: -13px;
+    top: -10px;
     left: 0px;
     background-image: url(../images/countr.png);
     background-position: center;
@@ -259,7 +259,7 @@ body
 }
 .heading_keep
 {
-    padding: 110px 0;
+    padding: 70px 0 35px;
 }
 .main_keep 
 {
@@ -326,14 +326,13 @@ body
 }
 .main_hand
 {
-    padding-bottom: 200px;
+    padding-bottom: 350px;
 }
 .hand_shake
 {
     position: absolute;
     left: 50%;
     bottom: -23px;
-    /*cursor: none;*/
 }
 .man
 {
